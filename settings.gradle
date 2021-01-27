@@ -1,0 +1,7 @@
+/*
+ * 20.01.2021
+ * @author Maksim Palushkin
+ */
+
+include ':app'
+rootProject.name = "Kotlin Test App"

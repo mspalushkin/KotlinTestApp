@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ 26.10.2020
+  ~ @author Maksim Palushkin
+  -->
+
+<animated-rotate xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/loading_img"
+    android:pivotX="50%"
+    android:pivotY="50%" />

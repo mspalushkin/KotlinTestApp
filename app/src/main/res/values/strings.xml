@@ -1,0 +1,11 @@
+<!--
+  ~ 20.01.2021
+  ~ @author Maksim Palushkin
+  -->
+
+<resources>
+    <string name="app_name">Kotlin Test App</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+</resources>
