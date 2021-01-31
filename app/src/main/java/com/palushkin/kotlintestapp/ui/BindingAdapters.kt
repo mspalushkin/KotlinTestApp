@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.palushkin.kotlintestapp.R
+import com.palushkin.kotlintestapp.domain.DomainUser
 import com.palushkin.kotlintestapp.network.User
 import com.palushkin.kotlintestapp.ui.home.UserApiStatus
 import com.palushkin.kotlintestapp.ui.home.UserListAdapter
@@ -22,7 +23,7 @@ import com.palushkin.kotlintestapp.ui.home.UserListAdapter
  * When there is no Mars property data (data is null), hide the [RecyclerView], otherwise show it.
  */
 @BindingAdapter("listData")
-fun bindRecyclerView(recyclerView: RecyclerView, data: List<User>?) {
+fun bindRecyclerView(recyclerView: RecyclerView, data: List<DomainUser>?) {
     val adapter = recyclerView.adapter as UserListAdapter
     adapter.submitList(data)
 }

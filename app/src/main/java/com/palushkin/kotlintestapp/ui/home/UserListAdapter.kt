@@ -11,15 +11,15 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.palushkin.kotlintestapp.databinding.ListItemBinding
-import com.palushkin.kotlintestapp.network.User
+import com.palushkin.kotlintestapp.domain.DomainUser
 
 class UserListAdapter(val onClickListener: OnClickListener) :
-        ListAdapter<User, UserListAdapter.UserViewHolder>(DiffCallback) {
+        ListAdapter<DomainUser, UserListAdapter.UserViewHolder>(DiffCallback) {
 
 
     class UserViewHolder(private var binding: ListItemBinding) :
             RecyclerView.ViewHolder(binding.root) {
-        fun bind(user: User) {
+        fun bind(user: DomainUser) {
             binding.property = user
             // This is important, because it forces the data binding to execute immediately,
             // which allows the RecyclerView to make the correct view size measurements
@@ -28,12 +28,12 @@ class UserListAdapter(val onClickListener: OnClickListener) :
     }
 
 
-    companion object DiffCallback : DiffUtil.ItemCallback<User>() {
-        override fun areItemsTheSame(oldItem: User, newItem: User): Boolean {
+    companion object DiffCallback : DiffUtil.ItemCallback<DomainUser>() {
+        override fun areItemsTheSame(oldItem: DomainUser, newItem: DomainUser): Boolean {
             return oldItem === newItem
         }
 
-        override fun areContentsTheSame(oldItem: User, newItem: User): Boolean {
+        override fun areContentsTheSame(oldItem: DomainUser, newItem: DomainUser): Boolean {
             return oldItem.id == newItem.id
         }
     }
@@ -56,8 +56,8 @@ class UserListAdapter(val onClickListener: OnClickListener) :
     }
 
 
-    class OnClickListener(val clickListener: (user: User) -> Unit) {
-        fun onClick(user: User) = clickListener(user)
+    class OnClickListener(val clickListener: (user: DomainUser) -> Unit) {
+        fun onClick(user: DomainUser) = clickListener(user)
     }
 
 

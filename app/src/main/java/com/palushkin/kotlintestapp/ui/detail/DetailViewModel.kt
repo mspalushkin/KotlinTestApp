@@ -9,13 +9,13 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.palushkin.kotlintestapp.network.User
+import com.palushkin.kotlintestapp.domain.DomainUser
 
-class DetailViewModel (user: User, app: Application) : AndroidViewModel(app) {
+class DetailViewModel (user: DomainUser, app: Application) : AndroidViewModel(app) {
 
-    private val _selectedUser = MutableLiveData<User>()
+    private val _selectedUser = MutableLiveData<DomainUser>()
 
-    val selectedUser: LiveData<User>
+    val selectedUser: LiveData<DomainUser>
         get() = _selectedUser
 
     init {

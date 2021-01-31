@@ -10,6 +10,8 @@ import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterF
 import com.squareup.moshi.FromJson
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.ToJson
+import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
+import kotlinx.coroutines.Deferred
 import okhttp3.ConnectionSpec
 import okhttp3.OkHttpClient
 import okhttp3.TlsVersion
@@ -36,7 +38,7 @@ class UserAdapter {
 
 private val moshi = Moshi.Builder()
         .add(UserAdapter())
-        //.add(KotlinJsonAdapterFactory())
+        .add(KotlinJsonAdapterFactory())
         //.addLast(KotlinJsonAdapterFactory())
         .build()
 
@@ -69,6 +71,9 @@ interface UserApiService {
     @GET("users")
     @WrappedRepoList
     suspend fun getUsers(): List<User>
+
+    @GET("users")
+    suspend fun getUserList(): UserList
 }
 
 object UserApi {

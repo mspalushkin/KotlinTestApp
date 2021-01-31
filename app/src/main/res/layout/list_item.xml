@@ -11,7 +11,7 @@
     <data>
         <variable
             name="property"
-            type="com.palushkin.kotlintestapp.network.User" />
+            type="com.palushkin.kotlintestapp.domain.DomainUser" />
     </data>
 
 

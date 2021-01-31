@@ -12,10 +12,6 @@
         <variable
             name="homeViewModel"
             type="com.palushkin.kotlintestapp.ui.home.HomeViewModel" />
-
-        <variable
-            name="property"
-            type="com.palushkin.kotlintestapp.network.User" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -60,5 +56,6 @@
             tools:listitem="@layout/list_item" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </layout>

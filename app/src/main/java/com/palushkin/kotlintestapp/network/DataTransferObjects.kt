@@ -6,6 +6,7 @@
 package com.palushkin.kotlintestapp.network
 
 import android.os.Parcelable
+import com.palushkin.kotlintestapp.database.DatabaseEntity
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 import kotlinx.parcelize.Parcelize
@@ -15,7 +16,6 @@ data class UserList(
 
         @Json(name = "data")
         val dataU: List<User>
-
 )
 
 @Parcelize
@@ -32,3 +32,15 @@ data class User(
         val imgSrcUrl: String
 
 ) : Parcelable
+
+fun UserList.asDatabaseModel(): Array<DatabaseEntity> {
+    return dataU.map {
+        DatabaseEntity(
+                id = it.id,
+                email = it.email,
+                firstName = it.firstName,
+                lastName = it.lastName,
+                imgSrcUrl = it.imgSrcUrl
+        )
+    }.toTypedArray()
+}

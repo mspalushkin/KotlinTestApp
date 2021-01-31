@@ -8,11 +8,12 @@ package com.palushkin.kotlintestapp.ui.detail
 import android.app.Application
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import com.palushkin.kotlintestapp.domain.DomainUser
 import com.palushkin.kotlintestapp.network.User
 
 class DetailViewModelFactory(
-        private val user: User,
-        private val application: Application
+    private val user: DomainUser,
+    private val application: Application
 ) : ViewModelProvider.Factory {
     @Suppress("unchecked_cast")
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {

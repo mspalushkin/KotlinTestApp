@@ -5,6 +5,10 @@
 
 package com.palushkin.kotlintestapp.domain
 
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
+
+@Parcelize
 data class DomainUser(
 
         val id: String,
@@ -13,4 +17,4 @@ data class DomainUser(
         val lastName: String,
         val imgSrcUrl: String
 
-)
+) : Parcelable
