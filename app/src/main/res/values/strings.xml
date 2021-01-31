@@ -8,4 +8,6 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="person">%1$s %2$s</string>
+    <string name="person_pic">person pic</string>
 </resources>

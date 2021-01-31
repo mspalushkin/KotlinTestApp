@@ -13,7 +13,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.palushkin.kotlintestapp.databinding.ListItemBinding
 import com.palushkin.kotlintestapp.network.User
 
-class UserListAdapter(val onClickListener: OnClickListener) : ListAdapter<User, UserListAdapter.UserViewHolder>(DiffCallback) {
+class UserListAdapter(val onClickListener: OnClickListener) :
+        ListAdapter<User, UserListAdapter.UserViewHolder>(DiffCallback) {
 
 
     class UserViewHolder(private var binding: ListItemBinding) :

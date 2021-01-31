@@ -42,6 +42,7 @@ class HomeViewModel : ViewModel() {
     private fun getUserProperties() {
 
         uiScope.launch {
+            // TODO: 28.01.2021  если нет сети -> UserApiStatus.ERROR
             _status.value = UserApiStatus.LOADING
             try {
                 //Log.i("test0", "ПРИШЕЛ_0")
