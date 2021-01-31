@@ -13,7 +13,7 @@
     <fragment
         android:id="@+id/navigation_home"
         android:name="com.palushkin.kotlintestapp.ui.home.HomeFragment"
-        android:label="@string/title_home"
+        android:label=""
         tools:layout="@layout/fragment_home" >
         <action
             android:id="@+id/action_navigation_home_to_detailFragment"
@@ -31,7 +31,7 @@
     <fragment
         android:id="@+id/detailFragment"
         android:name="com.palushkin.kotlintestapp.ui.detail.DetailFragment"
-        android:label="DetailFragment"
+        android:label="Detail"
         tools:layout="@layout/fragment_detail">
         <argument
             android:name="selectedUser"

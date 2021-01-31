@@ -1,5 +1,5 @@
 /*
- * 20.01.2021
+ * 31.01.2021
  * @author Maksim Palushkin
  */
 
@@ -9,6 +9,14 @@ import android.os.Parcelable
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 import kotlinx.parcelize.Parcelize
+
+@JsonClass(generateAdapter = true)
+data class UserList(
+
+        @Json(name = "data")
+        val dataU: List<User>
+
+)
 
 @Parcelize
 @JsonClass(generateAdapter = true)

@@ -6,6 +6,7 @@
 package com.palushkin.kotlintestapp.network
 
 
+import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import com.squareup.moshi.FromJson
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.ToJson
@@ -34,15 +35,15 @@ class UserAdapter {
 }
 
 private val moshi = Moshi.Builder()
-    .add(UserAdapter())
-    //.add(KotlinJsonAdapterFactory())
-    //.addLast(KotlinJsonAdapterFactory())
-    .build()
+        .add(UserAdapter())
+        //.add(KotlinJsonAdapterFactory())
+        //.addLast(KotlinJsonAdapterFactory())
+        .build()
 
 
 val spec: ConnectionSpec = ConnectionSpec.Builder(ConnectionSpec.MODERN_TLS)
-    .tlsVersions(TlsVersion.TLS_1_2)
-    .build()
+        .tlsVersions(TlsVersion.TLS_1_2)
+        .build()
 
 
 //val tlsSocketFactory: TLSSocketFactory = TLSSocketFactory()
@@ -51,16 +52,17 @@ val tlsSocketFactory: TLSSocketFactoryK = TLSSocketFactoryK()
 
 //@Suppress("NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS")
 val okHttpBuilder = OkHttpClient.Builder()
-    //.connectionSpecs(mutableListOf(ConnectionSpec.MODERN_TLS, ConnectionSpec.COMPATIBLE_TLS))
-    //.connectionSpecs(Collections.singletonList(spec))
-    //.sslSocketFactory(tlsSocketFactory, tlsSocketFactory.trustManager)
-    .build()
+        //.connectionSpecs(mutableListOf(ConnectionSpec.MODERN_TLS, ConnectionSpec.COMPATIBLE_TLS))
+        //.connectionSpecs(Collections.singletonList(spec))
+        //.sslSocketFactory(tlsSocketFactory, tlsSocketFactory.trustManager)
+        .build()
 
 private val retrofit = Retrofit.Builder()
-    .addConverterFactory(MoshiConverterFactory.create(moshi))
-    .baseUrl(BASE_URL)
-    //.client(okHttpBuilder)
-    .build()
+        .addConverterFactory(MoshiConverterFactory.create(moshi))
+        .baseUrl(BASE_URL)
+        //.client(okHttpBuilder)
+        .addCallAdapterFactory(CoroutineCallAdapterFactory())
+        .build()
 
 interface UserApiService {
 
