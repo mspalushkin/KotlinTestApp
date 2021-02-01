@@ -7,12 +7,12 @@
 <set xmlns:android="http://schemas.android.com/apk/res/android">
 
     <alpha
-        android:duration="@android:integer/config_shortAnimTime"
+        android:duration="150"
         android:fromAlpha="1.0"
         android:toAlpha="0.0" />
 
     <translate
-        android:duration="@android:integer/config_shortAnimTime"
+        android:duration="150"
         android:fromXDelta="0%"
         android:toXDelta="10%"
         android:fromYDelta="0%"
