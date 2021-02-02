@@ -79,7 +79,7 @@ fun bindImage(imgView: ImageView, imgUrl: String?, detailProgressBar: ProgressBa
         Glide.with(imgView.context)
                 .load(imgUri)
                 //.circleCrop()
-                .diskCacheStrategy(DiskCacheStrategy.NONE)
+                .diskCacheStrategy(DiskCacheStrategy.RESOURCE)
                 .listener(CustomListener(detailProgressBar))
                 .apply(
                         RequestOptions()
@@ -112,7 +112,7 @@ fun bindIcon(imgView: ImageView, imgUrl: String?) {
         Glide.with(imgView.context)
                 .load(imgUri)
                 .circleCrop()
-                .diskCacheStrategy(DiskCacheStrategy.NONE)
+                .diskCacheStrategy(DiskCacheStrategy.RESOURCE)
                 .into(imgView)
     }
 }

@@ -8,7 +8,9 @@
     <style name="Theme.KotlinTestApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_500</item>
+        <!--<item name="colorPrimary">#E8E8E8</item>-->
         <item name="colorPrimaryVariant">@color/purple_700</item>
+        <!--<item name="colorPrimaryVariant">#2DE319</item>-->
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
@@ -18,7 +20,9 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+    <!--<item name="theme">@style/ThemeOverlay.MaterialComponents.Dark.ActionBar</item>-->
     <style name="Toolbar" >
-        <item name="theme">@style/ThemeOverlay.MaterialComponents.Dark.ActionBar</item>
+        <!--#E8E8E8-->
+        <item name="android:background">#E8E8E8</item>
     </style>
 </resources>

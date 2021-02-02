@@ -18,7 +18,9 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+    <!--<item name="theme">@style/ThemeOverlay.MaterialComponents.Dark.ActionBar</item>-->
     <style name="Toolbar" >
-        <item name="theme">@style/ThemeOverlay.MaterialComponents.Dark.ActionBar</item>
+        <!--#E8E8E8-->
+        <item name="android:background">#9C0404</item>
     </style>
 </resources>
