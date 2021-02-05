@@ -20,10 +20,8 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:paddingTop="64dp"
-        android:paddingEnd="16dp"
         android:paddingLeft="16dp"
-        android:paddingRight="16dp"
-        android:paddingStart="16dp">
+        android:paddingRight="16dp">
 
         <ImageView
             android:layout_width="36dp"

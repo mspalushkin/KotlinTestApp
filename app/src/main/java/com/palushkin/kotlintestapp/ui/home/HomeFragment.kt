@@ -6,7 +6,9 @@
 package com.palushkin.kotlintestapp.ui.home
 
 import android.os.Bundle
-import android.view.*
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
@@ -14,6 +16,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.palushkin.kotlintestapp.R
 import com.palushkin.kotlintestapp.databinding.FragmentHomeBinding
+
 
 class HomeFragment : Fragment() {
 
@@ -32,7 +35,6 @@ class HomeFragment : Fragment() {
         viewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
         binding.lifecycleOwner = this
         binding.homeViewModel = viewModel
-
 
         binding.recyclerView.adapter = UserListAdapter(UserListAdapter.OnClickListener {
             viewModel.displayUserDetails(it)
