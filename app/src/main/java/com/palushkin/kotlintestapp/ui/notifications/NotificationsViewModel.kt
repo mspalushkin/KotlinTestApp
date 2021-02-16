@@ -12,7 +12,7 @@ import androidx.lifecycle.ViewModel
 class NotificationsViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "Тестовое задание для Rentateam"
+        value = "Тестовое сообщение"
     }
     val text: LiveData<String> = _text
 }

@@ -19,7 +19,11 @@ interface UserDao {
     fun insertAll(vararg videos: DatabaseEntity)
 }
 
-@Database(entities = [DatabaseEntity::class], version = 1)
+@Database(
+    entities = [
+        DatabaseEntity::class
+    ], version = 1
+)
 abstract class EntityDatabase : RoomDatabase() {
     abstract val userDao: UserDao
 }

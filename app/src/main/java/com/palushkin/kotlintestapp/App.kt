@@ -31,9 +31,9 @@ class App : MultiDexApplication() {
         try {
             // Google Play will install latest OpenSSL
             ProviderInstaller.installIfNeeded(applicationContext)
-//            val sslContext: SSLContext = SSLContext.getInstance("TLSv1.2")
-//            sslContext.init(null, null, null)
-//            sslContext.createSSLEngine()
+            // val sslContext: SSLContext = SSLContext.getInstance("TLSv1.2")
+            //sslContext.init(null, null, null)
+            // sslContext.createSSLEngine()
 
         } catch (e: GooglePlayServicesRepairableException) {
 
@@ -41,7 +41,7 @@ class App : MultiDexApplication() {
 
             // Prompt the user to install/update/enable Google Play services.
             GoogleApiAvailability.getInstance()
-                    .showErrorNotification(applicationContext, e.connectionStatusCode)
+                .showErrorNotification(applicationContext, e.connectionStatusCode)
 
             // Notify the SyncManager that a soft error occurred.
             //syncResult.stats.numIoExceptions++
